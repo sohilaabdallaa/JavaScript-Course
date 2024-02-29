@@ -1,0 +1,50 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fruits Assignment 2 </title>
+    <script>
+        // global array of fruits
+        var fruits = new Array();
+        var appleIndex;
+        function insertOneFruit() {
+            var userInput = prompt("Enter a fruit:");
+            // Check if userInput is not null and not an empty string
+            if (userInput !== null && userInput.trim() !== "" && isNaN(userInput)) {
+                return userInput.toLowerCase();
+            } else {
+                alert("Invalid input. Please enter a fruit.");
+            }
+        }
+
+        function displayArray() {
+            /*arrayRepresentation  = fruits.join(" , ");
+                        document.getElementById("display").innerHTML = arrayRepresentation ;*/
+            document.getElementById("display").innerHTML = fruits.valueOf();
+        }
+        function Deletion()
+        {
+            // check first if apple is not deleted before!
+            // to avoid multipie deletion of elements
+            if(fruits.includes('apple')) {
+            appleIndex = fruits.indexOf('apple');
+            fruits.splice(appleIndex, 1);}
+        }
+
+        for (i = 0; i < 4; i++) {
+            fruits[i] = insertOneFruit();
+        }
+    </script>
+</head>
+
+<body>
+    <span id="display"> </span>
+    <br>
+    <br>
+    <button onclick="Deletion()">Delete</button>
+    <button onclick="fruits.splice(appleIndex, 0, 'Lemon', 'Kiwi');">Insert</button>
+    <button onclick="displayArray()"> Try It</button>
+</body>
+
+</html>

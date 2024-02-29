@@ -1,0 +1,25 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advertising Window </title>
+</head>
+<script>
+    var myWindow; //global window
+    function openWindow() {
+        myWindow = window.open("advetisingDemo.html",'AdvertisingWindow',"width=400,height=400,scrollbars=yes");
+            // Focus on the advertising window
+        if (myWindow) {
+            myWindow.focus();
+            
+        }
+
+    }
+</script>
+
+<body>
+    <button onclick="openWindow()">Open Advertising Window</button>
+</body>
+
+</html>

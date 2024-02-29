@@ -1,0 +1,60 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Dynamic lists</title>
+</head>
+
+<script>
+    var dynamicList = [];
+
+    function addToList() {
+        while (true) {
+            var userInput = prompt("Enter a list item (Enter 'c' to stop):");
+
+            // Check if the user entered 'c' to stop
+            if (userInput.toLowerCase() === 'c') {
+                break;
+            }
+
+            // Add the list item to the array
+            dynamicList.push(userInput);
+        }
+
+
+        var parentList = document.createElement("ul");
+
+        for (var i = 0; i < dynamicList.length; i++) {
+
+            var newListItem = document.createElement("li");
+            var textNode = document.createTextNode(dynamicList[i]);
+            newListItem.appendChild(textNode);
+            parentList.appendChild(newListItem);
+
+        }
+
+
+        document.body.appendChild(parentList);
+
+
+    }
+
+</script>
+<style>
+    li {
+        font-size: 25px;
+    }
+</style>
+
+<body onload="addToList();">
+
+    <h2>Dynamic Unordered List</h2>
+    <div id="">
+
+
+    </div>
+
+</body>
+
+</html>

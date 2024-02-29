@@ -1,0 +1,78 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> DOM Validation </title>
+</head>
+<script>
+
+   // Function to check if the input is a string
+function validateName() {
+    var inputName = document.getElementById("name").value;
+    var nameRegex = /^[A-Za-z]+$/;
+
+    if (nameRegex.test(inputName)) {
+        return true;
+    } else {
+        document.getElementById("resultName").textContent = "invalid Name";
+        return false;
+    }
+}
+
+    // Function to check if the age is between - 1 and 100 inclusive 
+    function  validateYears() {
+        var ageRegex = /^(?:[1-9][0-9]?|100)$/;
+         var userAge = document.getElementById("age").value;
+    if (ageRegex.test(userAge)) {
+        return true;
+    } else {
+        alert("invalid Age");
+        return false;
+    }
+}
+
+// Function to validate email using regex
+function validateEmail() {
+        var email = document.getElementById("email").value;
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (emailRegex.test(email)) {
+            return true;
+        } else {
+            document.getElementById("resultEmail").textContent = "invalid Email"
+
+            return false;
+        }
+    }
+
+    function validateForm(event) {
+        if (!validateEmail() || !validateYears() || !validateName()) {
+            // If any validation fails, prevent the form from submitting
+            event.preventDefault();
+            return false;
+        }
+        return true;
+    }
+</script>
+
+<body>
+
+    <form onsubmit="return validateForm(event)">
+        <!-- Validate the maxlength with attribute -->
+        Name (max 10 characters): <input type="text" id="name" maxlength="10" required>
+        <br>
+        Age (from 1 to 100): <input type="text" id="age" required>
+        <br>
+        E-mail: <input type="text" id="email" required>
+        <br><br>
+        <button type="submit">Submit</button>
+    </form>
+    <div>
+        <p id="resultName"></p>
+        <p id="resultAge"></p>
+        <p id="resultEmail"></p>
+    </div>
+</body>
+
+</html>

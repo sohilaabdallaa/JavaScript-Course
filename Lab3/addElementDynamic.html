@@ -1,0 +1,39 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function addText()
+    {
+        var parent = document.getElementById("parent");  // Get parent div
+        var p1 = document.getElementById("p1");       // Get paragraph by its ID
+        var p2 = document.getElementById("p2");       // Get paragraph by its ID
+
+        var newP = document.createElement( "p" );         // Create a new paragraph element
+        var text = prompt("Enter some text:","Text");   // Get the text from user
+        newP.appendChild(document.createTextNode(text));   // Add text to the paragraph
+
+        
+        parent.appendChild(newP);
+        parent.insertBefore(newP,p2);  
+        
+        
+        var newP2 = document.createElement( "p" );         // Create a new paragraph element
+        var text = "HELLO";   // Get the text from user
+        newP2.appendChild(document.createTextNode(text));   // Add text to the paragraph
+        parent.appendChild(newP2);
+  
+    }
+</script>
+<body>
+    <div id="parent">
+    <p><input    type="button" onclick="addText()" value="click on me to add text " /></p>
+    <p id="p1">New text will appear below here</p>
+    <p id="p2">Some further H text in the page</p>
+</div>
+</body>
+
+</html>

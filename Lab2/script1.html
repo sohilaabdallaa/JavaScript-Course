@@ -1,0 +1,35 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fruits Assignment 1 </title>
+    <script>
+        var fruits = new Array();
+        for (i = 0; i < 4; i++) {
+            var userInput = prompt("Enter a fruit:");
+            // Check if userInput is not null and not an empty string
+            if (userInput !== null && userInput.trim() !== "" && isNaN(userInput)) {
+                fruits[i] = userInput;
+            } else {
+                alert("Invalid input. Please enter a fruit.");
+                i--;
+            }
+        }
+
+        function displayArray()
+        {
+            arrayRepresentation  = fruits.join(" and ");
+            document.getElementById("display").innerHTML = arrayRepresentation ;
+        }
+        
+    </script>
+</head>
+<body>
+    <span id ="display">    </span>
+    <br>
+    <br>
+<button onclick="displayArray()"> Try It</button>
+</body>
+
+</html>

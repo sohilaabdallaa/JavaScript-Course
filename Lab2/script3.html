@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 3</title>
+</head>
+<script>
+function getCurrentDateTime() {
+     today = new Date().toLocaleString();
+    alert("Current Date and Time:\n" + today);
+  }
+
+  function alertYesterdayDateTime() {
+    var today = new Date();
+    today.setDate(today.getDate() - 1);
+    alert("Yesterday's Date and Time:\n" + today.toLocaleString());
+  }
+
+  function alertTenYearsAgoDateTime() {
+    var tenYearsAgo = new Date();
+    tenYearsAgo.setFullYear(tenYearsAgo.getFullYear() - 10);
+    alert("Ten Years Ago Date and Time:\n" + tenYearsAgo.toLocaleString());
+  }
+
+  function alertOneWeekLaterDateTime() {
+    var oneWeekLater = new Date();
+    oneWeekLater.setDate(oneWeekLater.getDate() + 7);
+    alert("One Week Later Date and Time:\n" + oneWeekLater.toLocaleString());
+  }
+</script>
+</head>
+<body>
+    <button onclick="getCurrentDateTime()"> Now </button>
+    <button onclick="alertYesterdayDateTime()"> Yesterday </button>
+    <button onclick="alertTenYearsAgoDateTime()"> Ten Years Ago </button>
+    <button onclick="alertOneWeekLaterDateTime()"> In One Week </button>
+</body>
+</html>

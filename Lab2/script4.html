@@ -1,0 +1,50 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Form </title>
+</head>
+<script>
+
+    function compareStrings() {
+        // use tolower beacause === include the case
+        var string1 = document.getElementById("str1").value.toLowerCase();
+        var string2 = document.getElementById("str2").value.toLowerCase();
+
+        // validate not to enter numbers or empty  space
+        if (string1 === "" || !isNaN(string1)) {
+            alert('Input a String');
+            return;
+        }
+        else if (string2 === "" || !isNaN(string1)) {
+            alert('Compare with what?');
+            return;
+        }
+            //checking if the strings are equal or what
+        if (string1 < string2) {
+                document.getElementById("result").value = "The second string is greater than the first.";
+            } else if (string1 === string2) {
+                document.getElementById("result").value = "Both strings are equal.";
+            } else {
+                document.getElementById("result").value = "The first string is greater than the second.";
+            }
+
+    }
+</script>
+
+<body>
+    <form>
+        <label for="str1">Enter First String:</label>
+        <input type="text" id="str1" required>
+        <br><br>
+        <label for="str2">Enter Second String:</label>
+        <input type="text" id="str2" required>
+        <br><br>
+        <input type="button" value="Compare" onclick="compareStrings()" />
+        <br><br>
+        <textarea cols="30" rows="4" id="result" readonly></textarea>
+    </form>
+</body>
+
+</html>
