@@ -13,22 +13,22 @@ This is a convenient way for me to showcase my progress and for others to review
 ## Table of Contents
 
 1. [Lab 1: Basic JavaScript Operations](lab1/)
-    - 1.1 [Script for Arithmetic Operations](lab1/script1.js)
-    - 1.2 [Comparing Two Integers](lab1/script2.js)
-    - 1.3 [Simple Calculator Simulation](lab1/script3.js)
+    - 1.1 [Script for Arithmetic Operations](lab1/index.html)
+    - 1.2 [Comparing Two Integers](lab1/lab2.html)
+    - 1.3 [Simple Calculator Simulation by Evaluating Exepressions](lab1/lab3.html)
 
 2. [Lab 2: Working with Arrays and Buttons](lab2/)
-    - 2.1 [Array Operations](lab2/script1.js)
-    - 2.2 [Manipulating Array Elements](lab2/script2.js)
-    - 2.3 [Buttons Displaying Time and Date](lab2/script3.js)
-    - 2.4 [String Comparison Using XHTML Form](lab2/script4.js)
+    - 2.1 [Array Operations](lab2/script1.html)
+    - 2.2 [Manipulating Array Elements](lab2/script2.html)
+    - 2.3 [Buttons Displaying Time and Date](lab2/script3.html)
+    - 2.4 [String Comparison Using XHTML Form](lab2/script4.html)
 
 3. [Lab 3: Simple Calculator, Form Validation, and DOM Manipulation](lab3/)
-    - 3.1 [Simple Calculator](lab3/script1.js)
-    - 3.2 [Form Validation](lab3/script2.js)
-    - 3.3 [DOM Manipulation](lab3/script3.js)
-    - 3.4 [Parent Window with Scrollable Advertising](lab3/script4.js)
-    - 3.5 [Dynamic List Creation](lab3/script5.js)
+    - 3.1 [Simple Calculator](lab3/Calculator.js)
+    - 3.2 [Dom Manipulation Add New HTML Element Dynamic](lab3/addElementDynamic.html)
+    - 3.3 [DOM Manipulation and Validation](lab3/DOM_Validation.html)
+    - 3.4 [Parent Window with Scrollable Advertising](lab3/advertising_Window.html)
+    - 3.5 [Dynamic List Creation](lab3/dynamicList.html)
 
 ## Structure
 
