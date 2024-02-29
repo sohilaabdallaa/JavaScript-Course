@@ -1,0 +1,56 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+</head>
+
+<script>
+
+// parseing here handel if number contains string or is completely string 
+    
+do{
+    num1 = parseFloat(prompt("Enter The First Number"));
+    num2 = parseFloat(prompt("Enter The second Number"));
+    if (!isNumber())
+    {
+        alert ("Please enter a valid numbers!");
+        num1 = prompt("Enter The First Number");
+        num2 = prompt("Enter The second Number");
+    }
+    else if (num1 != num2)
+    {
+        alert(maxNumber()+" is greater.");
+    }
+}while(num1 != num2);
+
+    function isNumber()
+    {
+        // check that numbers are not NaN
+        if (isNaN(num1) || isNaN(num2))
+        {
+            return false;
+        }
+        return true;
+    }
+
+    function maxNumber()
+    {
+        if(num1 > num2) {
+            return num1;
+        } else {
+            return num2;
+        }
+    }
+
+    document.write("These number are equal. ");
+
+
+    
+
+</script>
+<body>
+    
+    <p> Click Refresh (Or Reload) to run  this script again.</p><br/>
+</body>
+</html>
